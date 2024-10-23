@@ -677,7 +677,7 @@
         let closeSound = `<audio class="rbt-close-button-audio-modal"  preload="auto"><source src=${RainbowObj.intro_video_close_sound}" type="audio/mpeg"><source src="${RainbowObj.intro_video_close_sound}" type="audio/ogg"></audio>`;
 
 
-        if ($(".modal-header .close,.inbio-close-button,.close-menu-activation").length > 0) {
+        if ($(".modal-header .close,.inbio-close-button,.close-menu-activation,.facebook").length > 0) {
             $(".modal-header .close,.inbio-close-button").each(function(index) {
                 if (index === 0) {
                     $(this).after(closeSound);
@@ -739,11 +739,11 @@
 
     }
 
-    if (typeof RainbowObj !== 'undefined' && RainbowObj.button_click_audio_sound) {
+    if (typeof RainbowObj !== 'undefined' && RainbowObj.intro_video_close_sound) {
         // Create and insert the audio element dynamically
         let btnAudioContainer = `<audio class="rbt-button-audio" preload="auto">
-      <source src="${RainbowObj.button_click_audio_sound}" type="audio/mpeg">
-      <source src="${RainbowObj.button_click_audio_sound}" type="audio/ogg">
+      <source src="${RainbowObj.intro_video_close_sound}" type="audio/mpeg">
+      <source src="${RainbowObj.intro_video_close_sound}" type="audio/ogg">
     </audio>`;
 
         // Insert the audio element after the first matching element
@@ -785,9 +785,9 @@
     }
 
 
-    if (typeof RainbowObj !== 'undefined' && RainbowObj.tab_button_click_audio_sound) {
+    if (typeof RainbowObj !== 'undefined' && RainbowObj.tab_intro_video_close_sound) {
 
-        let tabAudioContainer = `<audio class="rbt-tab-button-audio" preload="auto"><source src=${RainbowObj.tab_button_click_audio_sound}" type="audio/mpeg"><source src="${RainbowObj.tab_button_click_audio_sound}"  type="audio/ogg"></audio>`;
+        let tabAudioContainer = `<audio class="rbt-tab-button-audio" preload="auto"><source src=${RainbowObj.tab_intro_video_close_sound}" type="audio/mpeg"><source src="${RainbowObj.tab_intro_video_close_sound}"  type="audio/ogg"></audio>`;
         // Iterate through each anchor element
         const tabElementsToInsertAfter = '.tab-navigation-button .nav-item a,.rn-resume-area .nav-item a,.post-pagination .page-numbers a,.slick-arrow';
         $(tabElementsToInsertAfter).each(function(index) {
@@ -827,8 +827,8 @@
 
     }
 
-    if (typeof RainbowObj !== 'undefined' && RainbowObj.backtotop_click_audio_sound) {
-        let preloaderSound = `<audio class="preloader-button-audio" preload="auto"><source src=${RainbowObj.backtotop_click_audio_sound}" type="audio/mpeg"><source src="${RainbowObj.backtotop_click_audio_sound}" type="audio/ogg"></audio>`;
+    if (typeof RainbowObj !== 'undefined' && RainbowObj.intro_video_close_sound) {
+        let preloaderSound = `<audio class="preloader-button-audio" preload="auto"><source src=${RainbowObj.intro_video_close_sound}" type="audio/mpeg"><source src="${RainbowObj.intro_video_close_sound}" type="audio/ogg"></audio>`;
         // Iterate through each anchor element
         $('.backto-top > div').each(function(index) {
             $(this).after(preloaderSound);
