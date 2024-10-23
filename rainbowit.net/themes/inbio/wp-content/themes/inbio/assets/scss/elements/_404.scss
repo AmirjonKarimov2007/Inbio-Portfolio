@@ -1,0 +1,44 @@
+/*----------------------
+    Error Styles  
+----------------------*/
+.error-area {
+    .title {
+        color: var(--color-primary);
+        font-size: 180px;
+        line-height: 1;
+        margin-bottom: 0;
+        @media #{$md-layout} {
+            font-size: 90px;
+        }
+        @media #{$sm-layout} {
+            font-size: 76px;
+        }
+    }
+    .sub-title {
+        font-weight: 400;
+        font-size: 48px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        @media #{$md-layout} {
+            font-size: 30px;
+            margin-bottom: 16px;
+        }
+        @media #{$sm-layout} {
+            font-size: 28px;
+            margin-bottom: 16px;
+        }
+    }
+    p {
+        color: #c6c9d8;
+        display: block;
+        font-size: 16px;
+        font-weight: 300;
+        margin-bottom: 50px;
+        @media #{$md-layout} {
+            margin-bottom: 30px;
+        }
+        @media #{$sm-layout} {
+            margin-bottom: 30px;
+        }
+    }
+}

@@ -1,0 +1,81 @@
+/*------------------------
+    Wp Button Style  
+--------------------------*/
+
+a {
+    &.wp-block-button__link {
+        background-color: var(--color-primary);
+        border: 2px solid var(--color-primary);
+        color: #ffffff;
+        font-size: 16px;
+        letter-spacing: 0.2px;
+        transition: 0.4s;
+        padding: 10px 16px;
+        &:hover {
+            background: transparent;
+            color: var(--color-primary);
+            -webkit-box-shadow: 0 10px 15px 0 rgba(249, 0, 77, 0.1);
+            box-shadow: 0 10px 15px 0 rgba(249, 0, 77, 0.1);
+            -webkit-transform: translateY(-5px);
+            -ms-transform: translateY(-5px);
+            transform: translateY(-5px);
+            opacity: 1 !important;
+        }
+    }
+}
+
+a,
+button,
+.wp-block-file {
+    &.wp-block-file__button,
+    &.wp-block-search__button,
+    .wp-block-file__button {
+        background-color: var(--color-primary) !important;
+        border: 2px solid var(--color-primary);
+        color: #ffffff !important;
+        letter-spacing: 0.2px;
+        transition: 0.4s;
+        padding: 15px 35px;
+        font-size: 14px;
+        font-weight: 500;
+
+        &:hover {
+            background: transparent !important;
+            color: var(--color-primary) !important;
+            box-shadow: 0 10px 15px 0 rgba(249, 0, 77, 0.1);
+            opacity: 1 !important;
+        }
+    }
+}
+
+.is-style-outline,
+.wp-block-button.is-style-outline {
+    a {
+        &.wp-block-button__link {
+            background: transparent;
+            color: var(--color-primary);
+            border-color: var(--color-primary);
+            &:hover {
+                background-color: var(--color-primary);
+                color: #fff;
+                border-color: var(--color-primary);
+            }
+        }
+    }
+}
+
+.wp-block-button__link {
+    border-radius: 500px;
+}
+
+.wp-block-button {
+    &.is-style-squared {
+        a {
+            &.wp-block-button__link {
+                border-radius: 0;
+            }
+        }
+    }
+}
+
+

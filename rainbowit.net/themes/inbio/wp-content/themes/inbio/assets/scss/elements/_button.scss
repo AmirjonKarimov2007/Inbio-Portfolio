@@ -1,0 +1,430 @@
+/*---------------------------
+    Header Area Styles 
+-----------------------------*/
+
+a.rn-btn,
+button.rn-btn {
+    display: inline-block;
+    padding: 15px 35px;
+    list-style: none;
+    text-decoration: none;
+    color: var(--color-primary);
+}
+
+
+.contact-form-wrapper input[type="submit"] {
+    border-radius: 6px;
+    background: linear-gradient(145deg, #1e2024, #23272b);
+    box-shadow: var(--shadow-1);
+    transition: var(--transition);
+    position: relative;
+    z-index: 1;
+    font-size: 14px;
+    font-weight: 500;
+    border: 0 none;
+    color: var(--color-primary);
+}
+
+a,
+button {
+    &.rn-btn {
+        border-radius: 6px;
+        background: linear-gradient(145deg, #1e2024, #23272b);
+        box-shadow: var(--shadow-1);
+        transition: var(--transition);
+        position: relative;
+        z-index: 2;
+        font-size: 14px;
+        font-weight: 500;
+        border: 0 none;
+
+        &::before {
+            content: '';
+            position: absolute;
+            transition: var(--transition);
+            width: 100%;
+            height: 100%;
+            border-radius: 6px;
+            top: 0;
+            left: 0;
+            background: linear-gradient(to right bottom, #212428, #16181c);
+            opacity: 0;
+            z-index: -1;
+        }
+
+        &:hover {
+            transform: translateY(-5px);
+
+            &::before {
+                opacity: 1;
+            }
+        }
+
+        &.no-shadow {
+            box-shadow: none;
+        }
+
+        &.btn-theme {
+            background: var(--color-primary) !important;
+            color: var(--color-white) !important;
+
+            &::before {
+                display: none;
+            }
+        }
+
+        &.btn-transparent {
+            background: transparent;
+
+            &::before {
+                display: none;
+            }
+        }
+
+        &.thumbs-icon {
+            svg {
+                margin-top: -7px;
+            }
+        }
+    }
+
+}
+.rn-header {
+    .rn-btn{
+        width: max-content;
+    }
+}
+.breadcrumb-style-one {
+    background: #1f2125;
+    padding: 40px 0;
+
+    .breadcrumb-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .title {
+            font-size: 30px;
+            color: var(--color-heading);
+            margin: 0;
+
+            @media #{$sm-layout} {
+                margin-bottom: 10px;
+            }
+        }
+
+        .page-list {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+
+            li {
+                margin-top: 0;
+                margin-bottom: 0;
+                font-size: 16px;
+                list-style: none;
+
+                a {
+                    transition: var(--transition);
+                    color: var(--color-body);
+
+                    &:hover {
+                        color: var(--color-primary);
+                    }
+                }
+
+                &.separator {
+                    position: relative;
+                    padding: 0 20px;
+
+                    @media #{$sm-layout} {
+                        padding: 0 10px;
+                    }
+
+                    &::after {
+                        position: absolute;
+                        background-color: var(--color-primary);
+                        width: 5px;
+                        content: "";
+                        height: 5px;
+                        border-radius: 100%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        left: 50%;
+                        opacity: 0.5;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+.breadcrumb-area {
+    .plr--45 {
+        @media #{$sm-layout} {
+            padding: 0 15px !important;
+        }
+    }
+}
+
+
+.button-group {
+    margin: -15px;
+
+    @media #{$sm-layout} {
+        margin: -7px;
+    }
+
+    a {
+        &.rn-btn {
+            margin: 15px;
+            transition: var(--transition);
+
+            @media #{$sm-layout} {
+                margin: 7px;
+            }
+
+            &.btn-small {
+                padding: 13px 30px;
+            }
+
+            &.btn-large {
+                padding: 18px 40px;
+            }
+
+            &.border-button {
+                background: transparent;
+                border: 1px solid var(--color-primary);
+
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.button-style-border-radius {
+    .button-group {
+        a {
+            &.rn-btn {
+                border-radius: 0;
+
+                &::before {
+                    border-radius: 0;
+                }
+            }
+        }
+    }
+}
+
+.button-style-underline {
+    .button-group {
+        &:nth-child(1) {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+.rn-btn-ulderline {
+    position: relative;
+    margin: 30px !important;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: 40%;
+        background: var(--color-primary);
+        height: 3px;
+        bottom: -3px;
+        left: 0;
+        transition: var(--transition);
+    }
+
+    &:hover {
+        &::after {
+            width: 100%;
+        }
+    }
+}
+
+
+
+a.rn-btn.no-shadow,
+button.rn-btn.no-shadow {
+    box-shadow: none !important;
+}
+
+
+/* Clap Animat Button */
+
+.post-like span a.like-button.rn-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.post-like span a.like-button.rn-btn i {
+    padding-left: 4px;
+    margin-top: -3px;
+}
+
+.post-like span a.like-button.rn-btn mark {
+    line-height: 7px;
+    padding: 5px 5px;
+    font-size: 12px;
+    font-weight: 500;
+    background: var(--color-primary);
+}
+
+.like-button>* ,
+.like-button.rn-btn > * {
+    pointer-events: none !important;
+}
+
+
+
+
+.like-button,
+.like-button.rn-btn {
+    display: inline-block;
+    position: relative;
+    transition: 0.3s;
+
+    &:focus {
+        outline: 0;
+    }
+
+    &:before,
+    &:after {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 140%;
+        height: 100%;
+        left: -20%;
+        transition: all ease-in-out 0.5s;
+        background-repeat: no-repeat;
+        opacity: 1;
+    }
+
+    &:before {
+        display: none;
+        top: -75%;
+        background-image:
+            radial-gradient(circle, var(--color-primary) 10%, transparent 10%),
+            radial-gradient(circle, transparent 10%, var(--color-primary) 10%, transparent 30%),
+            radial-gradient(circle, var(--color-primary) 10%, transparent 10%),
+            radial-gradient(circle, var(--color-primary) 10%, transparent 10%),
+            radial-gradient(circle, transparent 10%, var(--color-primary) 15%, transparent 10%),
+            radial-gradient(circle, var(--color-primary) 10%, transparent 10%),
+            radial-gradient(circle, var(--color-primary) 10%, transparent 10%),
+            radial-gradient(circle, var(--color-primary) 10%, transparent 10%),
+            radial-gradient(circle, var(--color-primary) 10%, transparent 10%) !important;
+        background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+
+
+    }
+
+    &:after {
+        display: none;
+        bottom: -75%;
+        background-image:
+            radial-gradient(circle, var(--color-primary) 10%, transparent 10%),
+            radial-gradient(circle, var(--color-primary) 10%, transparent 10%),
+            radial-gradient(circle, transparent 10%, var(--color-primary) 15%, transparent 10%),
+            radial-gradient(circle, var(--color-primary) 10%, transparent 10%),
+            radial-gradient(circle, var(--color-primary) 10%, transparent 10%),
+            radial-gradient(circle, var(--color-primary) 10%, transparent 10%),
+            radial-gradient(circle, var(--color-primary) 10%, transparent 10%);
+        background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+
+
+    }
+
+    &:active {
+        transform: scale(0.9) !important;
+    }
+
+    &.animate {
+        &:before {
+            display: block;
+            animation: topBubbles ease-in-out 0.75s forwards;
+        }
+
+        &:after {
+            display: block;
+            animation: bottomBubbles ease-in-out 0.75s forwards;
+        }
+    }
+}
+
+
+.like-button {
+    &:before {
+        background-image:
+            radial-gradient(circle, var(--color-primary) 30%, transparent 30%),
+            radial-gradient(circle, transparent 30%, var(--color-primary) 30%, transparent 30%),
+            radial-gradient(circle, var(--color-primary) 30%, transparent 30%),
+            radial-gradient(circle, var(--color-primary) 30%, transparent 30%),
+            radial-gradient(circle, transparent 30%, var(--color-primary) 15%, transparent 30%),
+            radial-gradient(circle, var(--color-primary) 30%, transparent 30%),
+            radial-gradient(circle, var(--color-primary) 30%, transparent 30%),
+            radial-gradient(circle, var(--color-primary) 30%, transparent 30%),
+            radial-gradient(circle, var(--color-primary) 30%, transparent 30%);
+    }
+
+    &:after {
+        background-image:
+            radial-gradient(circle, var(--color-primary) 30%, transparent 30%),
+            radial-gradient(circle, var(--color-primary) 30%, transparent 30%),
+            radial-gradient(circle, transparent 30%, var(--color-primary) 15%, transparent 30%),
+            radial-gradient(circle, var(--color-primary) 30%, transparent 30%),
+            radial-gradient(circle, var(--color-primary) 30%, transparent 30%),
+            radial-gradient(circle, var(--color-primary) 30%, transparent 30%),
+            radial-gradient(circle, var(--color-primary) 30%, transparent 30%);
+    }
+}
+
+
+@keyframes topBubbles {
+    0% {
+        background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+    }
+
+    50% {
+        background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+    }
+
+    100% {
+        background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+
+@keyframes bottomBubbles {
+    0% {
+        background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+    }
+
+    50% {
+        background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+    }
+
+    100% {
+        background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+        background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+    }
+}
+
+
+
+
+
+
+
+

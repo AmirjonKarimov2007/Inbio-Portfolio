@@ -1,0 +1,58 @@
+// Backto top
+
+.backto-top {
+    opacity: 0;
+}
+.backto-top>div {
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    cursor: pointer;
+    z-index: 999;
+    width: 50px;
+    height: 50px;
+    line-height: 46px;
+    border-radius: 50%;
+    background-color: #212428;
+    text-align: center;
+    z-index: 999 !important;
+    box-shadow: var(--shadow-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media #{$md-layout} {
+        bottom: 30px;
+    }
+    @media #{$sm-layout} {
+        bottom: 10px;
+        right: 10px;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        transition: var(--transition);
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        top: 0;
+        left: 0;
+        background: linear-gradient(to right bottom, #212428, #16181c);
+        opacity: 0;
+        z-index: -1;
+    }
+    &:hover {
+        
+    }
+}
+
+.backto-top i {
+    color: var(--color-primary);
+    position: relative;
+    z-index: 1;
+    font-size: 20px;
+}
+
+.backto-top.position-left > div {
+    right: auto;
+    left: 30px;
+}

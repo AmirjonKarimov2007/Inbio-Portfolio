@@ -1,0 +1,149 @@
+:root {
+    // themes color
+    --color-primary: #ff014f;
+    --color-secondary: #f4f5f6;
+    --color-tertiary: #0d1013;
+    --color-dark: #1a1d23;
+    --color-darker: #1e1f21;
+    --color-gray: #f6f6f6;
+    --color-subtitle: #f9004d;
+    --color-border-white: #dadada;
+
+    --color-primary-gradient-from: #6a67ce;
+    --color-primary-gradient-to: #fc636b;
+
+
+    // background-color
+    --background-color-1: linear-gradient(145deg, #1e2024, #23272b);
+    --background-color-2: #212428;
+
+    // box-shadow
+    --shadow-1: 10px 10px 19px #1c1e22,
+        -10px -10px 19px #262a2e;
+    --shadow-2: inset 21px 21px 19px #181a1d, inset -21px -21px 19px #202225;
+    --inner-shadow: 1px 4px 2px -3px rgba(0, 0, 0, 0.7) inset, -1px -3px 3px -2px rgba(255, 255, 255, 0.2) inset;
+    --inner-shadow-white: 1px 4px 2px -3px #D1D9E6 inset, -1px -3px 3px -2px #ffffff inset;
+
+    --shadow-white-3: 5px 5px 15px #D1D9E6, -5px -5px 15px #ffffff;
+
+
+    // Gradient
+    --gradient-box-w: linear-gradient(145deg, #e2e8ec, #ffffff);
+    --gradient-red-hover: linear-gradient(145deg, var(--color-primary-gradient-from), var(--color-primary-gradient-to));
+
+
+
+    // typo Color
+    --color-heading: #c4cfde;
+    --color-heading-wv: #1e2125;
+    --color-body: #878e99;
+    --color-body-white: #3c3e41;
+    --color-lightn: #c4cfde;
+
+    // Gery Colors 
+    // --color-midgray: #9F9F9F;
+    --color-midgray: #878787;
+    --color-light: #E4E6EA;
+    --color-lighter: #CED0D4;
+    --color-lightest: #F0F2F5;
+    --color-border: hsla(0, 0%, 100%, .2);
+    --color-white: #ffffff;
+    --color-white-75: rgba(255, 255, 255, 0.75);
+
+
+    // notify Colors
+    --color-success: #3EB75E;
+    --color-danger: #FF0003;
+    --color-warning: #FF8F3C;
+    --color-info: #1BA2DB;
+
+    --color-border-white: #dce1e4;
+
+
+    //Social icon colors
+    --color-facebook: #3B5997;
+    --color-twitter: #1BA1F2;
+    --color-youtube: #ED4141;
+    --color-linkedin: #0077B5;
+    --color-pinterest: #E60022;
+    --color-instagram: #C231A1;
+    --color-vimeo: #00ADEF;
+    --color-twitch: #6441A3;
+    --color-discord: #7289da;
+
+
+    --color-separator: #878e9982;
+
+    --border-width: 2px;
+
+    
+    // Font weight
+    --p-light: 300;
+    --p-regular: 400;
+    --p-medium: 500;
+    --p-semi-bold: 600;
+    --p-bold: 700;
+    --p-extra-bold: 800;
+    --p-black: 900;
+
+    // Font weight
+    --s-light: 300;
+    --s-regular: 400;
+    --s-medium: 500;
+    --s-semi-bold: 600;
+    --s-bold: 700;
+    --s-extra-bold: 800;
+    --s-black: 900;
+
+
+    //transition easing
+    --transition: 0.4s;
+
+
+    // Font Family
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Montserrat', sans-serif;
+
+
+
+    //Fonts Size
+    --font-size-b1: 18px;
+    --font-size-b2: 22px;
+    --font-size-b3: 14px;
+
+
+    //Line Height
+    --line-height-b1: 1.9;
+    --line-height-b2: 1.6;
+    --line-height-b3: 1.7;
+
+
+    // Heading Font
+    // --h1: 70px;
+    // --h2: 42px;
+    // --h3: 40px;
+    // --h4: 32px;
+    // --h5: 20px;
+    // --h6: 16px;
+
+    // Heading Font
+    --h1: 44px; //52px 1.29;
+    --h2: 36px; //44px 1.23;
+    --h3: 30px; // 34px 1.14;
+    --h4: 24px; //30px  1.25;
+    --h5: 18px; //22px 1.24;
+    --h6: 16px; //20px 1.25;
+    --radius: 4px;
+
+}
+
+// Layouts Variation
+$smlg-device: 'only screen and (max-width: 1199px)';
+$extra-device: 'only screen and (min-width: 1600px) and (max-width: 1919px)';
+$laptop-device: 'only screen and (min-width: 1200px) and (max-width: 1599px)';
+$lg-layout: 'only screen and (min-width: 992px) and (max-width: 1199px)';
+$md-layout:'only screen and (min-width: 768px) and (max-width: 991px)';
+$sm-layout:'only screen and (max-width: 767px)';
+$large-mobile: 'only screen and (max-width: 575px)';
+$small-mobile: 'only screen and (max-width: 479px)';
+
